@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clapping Music - Strudel - Phase Garden</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Clapping Music</h1>
+  <p><a href="/strudel/">Back to Strudel</a></p>
+  <p>After Steve Reich (1972)</p>
+  <button id="load">Load Samples</button>
+  <button id="start" disabled>Start</button>
+  <button id="stop">Stop</button>
+  <p id="status">Click "Load Samples" first</p>
+  <div>
+    <label for="bpm">BPM: <span id="bpm-value">168</span></label>
+    <input type="range" id="bpm" min="80" max="240" value="168">
+  </div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
