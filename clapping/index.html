@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tapping Music - Phase Garden</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Tapping Music</h1>
+  <p><a href="/">Back to home</a></p>
+  <p>After Steve Reich (1972)</p>
+  <button id="start">Start</button>
+  <button id="stop">Stop</button>
+  <div>
+    <label for="bpm">BPM: <span id="bpm-value">168</span></label>
+    <input type="range" id="bpm" min="80" max="240" value="168">
+  </div>
+  <div>
+    <label for="bars-per-shift">Bars per shift: <span id="bars-value">8</span></label>
+    <input type="range" id="bars-per-shift" min="4" max="16" value="8">
+  </div>
+  <div>
+    <label for="humanize">Humanize: <span id="humanize-value">20</span>ms</label>
+    <input type="range" id="humanize" min="0" max="50" value="20">
+  </div>
+  <p id="status">Ready</p>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
