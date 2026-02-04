@@ -28,9 +28,12 @@ Note: Standard npm scripts (dev, build) are not configured in package.json. Use 
 ├── index.html              # Main landing page with links to sections
 ├── pentatonic/
 │   ├── index.html          # Section page listing pentatonic demos
-│   └── kalimba/
+│   ├── kalimba/
+│   │   ├── index.html      # Demo page with Start/Stop buttons
+│   │   └── main.js         # Kalimba synth demo
+│   └── kalimba-21/
 │       ├── index.html      # Demo page with Start/Stop buttons
-│       └── main.js         # Kalimba synth demo
+│       └── main.js         # 21-key kalimba demo
 ├── voices/
 │   ├── index.html          # Section page listing voice demos
 │   ├── gamelan/
@@ -39,6 +42,14 @@ Note: Standard npm scripts (dev, build) are not configured in package.json. Use 
 │   └── d-major/
 │       ├── index.html      # Demo page with Start/Stop buttons
 │       └── main.js         # D major phasing loops demo
+├── strudel/
+│   ├── index.html          # Section page listing Strudel demos
+│   ├── d-major/
+│   │   ├── index.html      # Demo page with Start/Stop buttons
+│   │   └── main.js         # D major in Strudel
+│   └── morecomplex/
+│       ├── index.html      # Demo page with sliders
+│       └── main.js         # TR-909 drum pattern
 ├── notes/                  # Shared audio samples
 └── CLAUDE.md
 ```
@@ -49,12 +60,19 @@ Note: Standard npm scripts (dev, build) are not configured in package.json. Use 
 Demos using synthesized pentatonic scales.
 
 - **Kalimba** - Thumb piano style synth with random pentatonic notes
+- **Kalimba 21** - 21-key kalimba with 7 voices playing across 4 octaves of C pentatonic
 
 ### Voices
 Demos using recorded voice samples.
 
 - **Gamelan** - Seven voice samples playing at prime-number intervals (17m, 19m, 23m, 29m, 31m, 37m, 41m) at 30 BPM, creating Steve Reich-style phasing patterns
 - **D Major** - 14 synth loops with lengths between 23.5-29.9375 seconds, playing 1-4 note figures in D major
+
+### Strudel
+Demos using the Strudel pattern library (TidalCycles for JavaScript).
+
+- **D Major** - The D Major piece reimplemented using Strudel's pattern notation
+- **More Complex** - TR-909 drum pattern with degraded kicks/claps, white noise, and interactive sliders
 
 ## Dependencies
 
