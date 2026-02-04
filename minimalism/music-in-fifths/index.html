@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music in Fifths - Minimalism - Phase Garden</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Music in Fifths</h1>
+  <p>After Philip Glass (1969)</p>
+  <p><a href="/minimalism/">Back to Minimalism</a></p>
+  <button id="start">Start</button>
+  <button id="stop">Stop</button>
+  <div>
+    <label for="bpm">BPM: <span id="bpm-value">140</span></label>
+    <input type="range" id="bpm" min="80" max="200" value="140">
+  </div>
+  <div>
+    <label for="cycle-time">Cycle time (seconds): <span id="cycle-value">60</span></label>
+    <input type="range" id="cycle-time" min="30" max="180" value="60">
+  </div>
+  <p id="status"></p>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

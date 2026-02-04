@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>In C - Minimalism - Phase Garden</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>In C</h1>
+  <p>After Terry Riley (1964)</p>
+  <p><a href="/minimalism/">Back to Minimalism</a></p>
+  <button id="start">Start</button>
+  <button id="stop">Stop</button>
+  <div>
+    <label for="bpm">BPM: <span id="bpm-value">120</span></label>
+    <input type="range" id="bpm" min="80" max="180" value="120">
+  </div>
+  <div>
+    <label for="advance-rate">Advance rate: <span id="advance-value">Medium</span></label>
+    <input type="range" id="advance-rate" min="1" max="5" value="3">
+  </div>
+  <div id="voices-status"></div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

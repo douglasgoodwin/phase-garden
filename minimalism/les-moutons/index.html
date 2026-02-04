@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Moutons de Panurge - Minimalism - Phase Garden</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Les Moutons de Panurge</h1>
+  <p>After Frederic Rzewski (1969)</p>
+  <p><a href="/minimalism/">Back to Minimalism</a></p>
+  <button id="start">Start</button>
+  <button id="stop">Stop</button>
+  <div>
+    <label for="bpm">BPM: <span id="bpm-value">180</span></label>
+    <input type="range" id="bpm" min="120" max="280" value="180">
+  </div>
+  <div>
+    <label for="voices">Voices: <span id="voices-value">5</span></label>
+    <input type="range" id="voices" min="2" max="8" value="5">
+  </div>
+  <div>
+    <label for="stagger">Stagger (notes): <span id="stagger-value">8</span></label>
+    <input type="range" id="stagger" min="1" max="20" value="8">
+  </div>
+  <p id="status"></p>
+  <div id="voices-status"></div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

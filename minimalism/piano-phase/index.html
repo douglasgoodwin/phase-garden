@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piano Phase - Minimalism - Phase Garden</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Piano Phase</h1>
+  <p>After Steve Reich (1967)</p>
+  <p><a href="/minimalism/">Back to Minimalism</a></p>
+  <button id="start">Start</button>
+  <button id="stop">Stop</button>
+  <div>
+    <label for="bpm">BPM: <span id="bpm-value">144</span></label>
+    <input type="range" id="bpm" min="100" max="180" value="144">
+  </div>
+  <div>
+    <label for="phase-time">Phase time (seconds): <span id="phase-value">12</span></label>
+    <input type="range" id="phase-time" min="4" max="30" value="12">
+  </div>
+  <p id="status"></p>
+  <div id="voices-status"></div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
