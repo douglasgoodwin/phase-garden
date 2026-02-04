@@ -36,6 +36,35 @@ Inspired by Balinese gamelan music, this piece layers seven vocal samples that r
 
 Fourteen soft synthesizer loops play figures in D major, with loop lengths ranging from 23.5 to 29.9375 seconds. Each loop contains one to four notes that play in sequence before the loop repeats. The slightly different loop lengths cause the voices to drift in and out of phase with each other, creating an ever-changing harmonic landscape. The sine wave oscillators and long attack times give each voice a breath-like, vocal quality.
 
+### Minimalism
+
+Implementations of classic process music pieces, each faithfully reproducing the compositional rules and constraints of the original works.
+
+#### In C
+`/minimalism/in-c/`
+
+Terry Riley's seminal 1964 work that launched the minimalist movement. 53 short melodic phrases are played by six voices (Marimba, Vibraphone, Piano, Violin, Flute, Plucked), each independently deciding when to advance to the next phrase. A steady high-C pulse anchors everything. The "Advance rate" slider controls how quickly voices progress through the phrases, from meditative 30+ minute performances to quick 5-minute sprints.
+
+#### Piano Phase
+`/minimalism/piano-phase/`
+
+Steve Reich's 1967 phasing study for two pianos. Both play the same 12-note pattern (E-F#-B-C#-D-F#-E-C#-B-F#-D-C#), but Piano 2 periodically accelerates until it's one note ahead, then locks back in sync. This repeats through all 12 phase positions until the pianos return to unison. Progress bars show each piano's relative position in the cycle.
+
+#### Music in Fifths
+`/minimalism/music-in-fifths/`
+
+Philip Glass's 1969 piece demonstrating his additive process technique. Two voices play in parallel fifths (always 7 semitones apart) through a 24-note melodic figure. The piece starts with just 2 notes, gradually adds one note at a time until the full pattern plays, then removes notes back down to 2. The cycle time slider controls how long this expansion/contraction takes.
+
+#### Les Moutons de Panurge
+`/minimalism/les-moutons/`
+
+Frederic Rzewski's 1969 work ("The Sheep of Panurge") for any number of melody instruments. A 65-note modal melody is played through an additive then subtractive process: first 1, then 1-2, then 1-2-3... up to all 65 notes, then 2-65, 3-65... down to just note 65. Multiple voices (2-8) perform this independently with staggered starts, creating rich canonic textures. Named after Rabelais' story of sheep blindly following each other.
+
+#### Tapping Music
+`/minimalism/tapping-music/`
+
+An interpretation of Steve Reich's Clapping Music (1972) using bell tones. Two voices play Reich's 12-beat pattern (X X X - X X - X - X X -). One voice stays fixed while the other shifts one beat at a time, cycling through all 12 phase positions before returning to unison. Sliders control tempo, bars between shifts, and humanization (timing variation).
+
 ### Strudel
 
 #### D Major
