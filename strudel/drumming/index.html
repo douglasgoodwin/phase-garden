@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drumming - Strudel - Phase Garden</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Drumming</h1>
+  <p>After Steve Reich (1970-71)</p>
+  <p><a href="/strudel/">Back to Strudel</a></p>
+  <button id="load">Load Samples</button>
+  <button id="start" disabled>Start</button>
+  <button id="stop">Stop</button>
+  <div>
+    <label for="bpm">BPM: <span id="bpm-value">168</span></label>
+    <input type="range" id="bpm" min="120" max="220" value="168">
+  </div>
+  <div>
+    <label for="part">Part:</label>
+    <select id="part">
+      <option value="1">Part 1: Bongos</option>
+      <option value="2">Part 2: Marimbas</option>
+      <option value="3">Part 3: Glockenspiels</option>
+      <option value="4" selected>Part 4: All Combined</option>
+    </select>
+  </div>
+  <div>
+    <label for="density">Pattern density: <span id="density-value">100</span>%</label>
+    <input type="range" id="density" min="20" max="100" value="100">
+  </div>
+  <p id="status">Click "Load Samples" to begin</p>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

@@ -17,9 +17,9 @@ const { scheduler } = repl({
   getTime: () => ctx.currentTime,
 });
 
-// Reich's tempo was around 160-180 BPM
+// Reich's tempo was around 160-220 BPM, often performed briskly
 // 12 beats per pattern, so cps = bpm/60/12
-let bpm = 168;
+let bpm = 220;
 scheduler.setCps(bpm / 60 / 12);
 
 const statusEl = document.getElementById("status");
@@ -39,8 +39,8 @@ loadBtn.addEventListener("click", async () => {
   statusEl.textContent = "Loading samples...";
 
   try {
-    await samples("github:tidalcycles/dirt-samples");
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    // Load from local dirt-samples folder
+    await samples("/dirt-samples/strudel.json");
 
     statusEl.textContent = "Samples loaded!";
     startBtn.disabled = false;
@@ -71,23 +71,28 @@ let barCount = 0;
 const barsPerShift = 8; // Shift every 8 bars
 
 function buildPattern() {
-  // Fixed clapper - lower pitch, panned left
-  // Uses cp:0 (or we simulate with different n)
-  const fixed = s(mini(patternToMini(basePattern, "cp")))
+  // Fixed clapper - panned left, using realclaps samples
+  const fixed = s(mini(patternToMini(basePattern, "realclaps")))
     .n(0)
-    .gain(0.65)
-    .pan(0.25)
-    // Slight random timing variation for human feel
-    .late(Math.random() * 0.008);
+    .speed(1.3)  // Pitch up
+    .gain(0.75)
+    .pan(0.3)
+    // Per-note humanization: timing variation and velocity variation
+    .late(mini("0 0.004 0.002 0 0.006 0.001 0 0.003 0 0.005 0.002 0"))
+    .room(0.3)
+    .size(1.5);
 
-  // Shifting clapper - higher pitch variant, panned right
+  // Shifting clapper - panned right, different realclaps sample
   const shiftedArr = rotatePattern(basePattern, shiftPosition);
-  const shifting = s(mini(patternToMini(shiftedArr, "cp")))
-    .n(1)  // Different clap sample
-    .gain(0.65)
-    .pan(0.75)
-    // Slightly different timing imperfection
-    .late(Math.random() * 0.01);
+  const shifting = s(mini(patternToMini(shiftedArr, "realclaps")))
+    .n(2)  // Different clap sample for distinction
+    .speed(1.25)  // Pitch up (slightly different for variety)
+    .gain(0.75)
+    .pan(0.7)
+    // Different humanization pattern so they don't lock together
+    .late(mini("0.003 0 0.005 0.001 0 0.004 0.002 0 0.006 0 0.003 0.001"))
+    .room(0.3)
+    .size(1.5);
 
   return stack(fixed, shifting);
 }

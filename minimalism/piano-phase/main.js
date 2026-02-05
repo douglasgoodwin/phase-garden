@@ -74,24 +74,42 @@ document.getElementById('start').addEventListener('click', async () => {
   const baseBpm = parseInt(bpmSlider.value);
   Tone.Transport.bpm.value = baseBpm;
 
-  // Reverb for concert hall feel
-  const reverb = new Tone.Reverb({ decay: 2, wet: 0.2 }).toDestination();
+  // Reverb for concert hall feel (must await generation)
+  const reverb = new Tone.Reverb({ decay: 2.5, wet: 0.25 }).toDestination();
+  await reverb.generate();
+
+  // Piano-like FM synth settings
+  const pianoSettings = {
+    harmonicity: 3,
+    modulationIndex: 1.5,
+    oscillator: { type: 'sine' },
+    envelope: {
+      attack: 0.001,
+      decay: 1.2,
+      sustain: 0.1,
+      release: 1.5
+    },
+    modulation: { type: 'sine' },
+    modulationEnvelope: {
+      attack: 0.001,
+      decay: 0.5,
+      sustain: 0.2,
+      release: 0.8
+    }
+  };
 
   // Piano 1 - left channel, fixed tempo
   const panner1 = new Tone.Panner(-0.5).connect(reverb);
-  piano1 = new Tone.Synth({
-    oscillator: { type: 'triangle8' },
-    envelope: { attack: 0.005, decay: 0.4, sustain: 0.1, release: 0.3 }
-  }).connect(panner1);
-  piano1.volume.value = -8;
+  piano1 = new Tone.FMSynth(pianoSettings).connect(panner1);
+  piano1.volume.value = -10;
 
-  // Piano 2 - right channel, phases ahead
+  // Piano 2 - right channel, phases ahead (slightly different timbre)
   const panner2 = new Tone.Panner(0.5).connect(reverb);
-  piano2 = new Tone.Synth({
-    oscillator: { type: 'triangle8' },
-    envelope: { attack: 0.005, decay: 0.4, sustain: 0.1, release: 0.3 }
+  piano2 = new Tone.FMSynth({
+    ...pianoSettings,
+    harmonicity: 3.01,  // Slight detune for stereo interest
   }).connect(panner2);
-  piano2.volume.value = -8;
+  piano2.volume.value = -10;
 
   // Note indices for each piano
   let index1 = 0;
@@ -118,7 +136,11 @@ document.getElementById('start').addEventListener('click', async () => {
   let lockTime = 0;
   const lockDuration = 4; // seconds to stay locked before phasing again
 
-  phaseLoop = new Tone.Loop((time) => {
+  // Use setInterval instead of Tone.Loop to avoid scheduling conflicts
+  // when changing playbackRate
+  let phaseIntervalId = setInterval(() => {
+    if (Tone.Transport.state !== 'started') return;
+
     const phaseTime = parseInt(phaseSlider.value);
 
     if (!isPhasing) {
@@ -149,13 +171,14 @@ document.getElementById('start').addEventListener('click', async () => {
         }
       }
     }
+  }, 100);
 
-    Tone.Draw.schedule(() => updateDisplay(), time);
-  }, 0.1);
+  // Store interval ID for cleanup
+  phaseLoop = { stop: () => clearInterval(phaseIntervalId), dispose: () => clearInterval(phaseIntervalId) };
 
   seq1.start(0);
   seq2.start(0);
-  phaseLoop.start(0);
+  // phaseLoop is a setInterval, starts automatically
   Tone.Transport.start();
 
   updateDisplay();
