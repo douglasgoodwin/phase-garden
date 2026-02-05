@@ -11,3 +11,7 @@ node_modules/
 
 # Build output
 dist/
+
+# Sample libraries (too large for git)
+dirt-samples/
+master.zip
