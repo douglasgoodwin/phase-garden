@@ -67,10 +67,27 @@ An interpretation of Steve Reich's Clapping Music (1972) using bell tones. Two v
 
 ### Strudel
 
+Pieces using [Strudel](https://strudel.cc/), an algorithmic pattern library (TidalCycles for JavaScript). Strudel excels at fixed interlocking patterns with transformations, while Tone.js is better for stateful processes with dynamic tempo changes.
+
 #### D Major
 `/strudel/d-major/`
 
 The D Major piece reimplemented using Strudel's pattern language. The same 14 phasing loops are expressed in about 30 lines instead of 70, demonstrating Strudel's concise notation. Each voice is a single `note()` pattern with `.slow()` to set the loop length, all stacked together.
+
+#### Clapping Music
+`/strudel/clapping/`
+
+Steve Reich's 1972 piece for two clappers. Uses real handclap samples with humanized timing offsets and reverb. One clapper stays fixed while the other shifts one beat every 8 bars, cycling through all 12 phase positions. Reich's original 12-beat pattern (3-rest-2-rest-1-rest-2-rest) creates constantly changing syncopations as the two parts align and misalign.
+
+#### Drumming
+`/strudel/drumming/`
+
+Steve Reich's monumental 1970-71 work in four parts. Part 1 uses tabla samples for the four tuned bongos, Parts 2-3 use synthesized marimbas and glockenspiels. Reich's basic 12-beat rhythmic pattern (positions 1-4-7-9-11) is played by multiple voices with different phase offsets, creating dense interlocking textures. The density slider simulates Reich's "substituting beats for rests" technique.
+
+#### Piano Phase
+`/strudel/piano-phase/`
+
+Steve Reich's 1967 phasing study, reimplemented using Strudel's natural drift approach. Two pianos play the same 12-note pattern, but Piano 2 runs at `.slow(1 - drift)`, completing each cycle slightly faster. Over time it naturally pulls ahead, creating smooth continuous phasing rather than discrete tempo jumps. The drift slider controls how quickly the phasing occurs.
 
 #### More Complex
 `/strudel/morecomplex/`
