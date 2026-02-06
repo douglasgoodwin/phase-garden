@@ -77,7 +77,7 @@ The D Major piece reimplemented using Strudel's pattern language. The same 14 ph
 #### Clapping Music
 `/strudel/clapping/`
 
-Steve Reich's 1972 piece for two clappers. Uses real handclap samples with humanized timing offsets and reverb. One clapper stays fixed while the other shifts one beat every 8 bars, cycling through all 12 phase positions. Reich's original 12-beat pattern (3-rest-2-rest-1-rest-2-rest) creates constantly changing syncopations as the two parts align and misalign.
+Steve Reich's 1972 piece for two clappers, implemented using techniques from the ICLC 2025 paper (see Related Research below). Uses `.jux()` for stereo split, `.iter(12)` for automatic phase rotation, `.repeatCycles(8)` for holding each position, and `rand.range()` for humanized velocity. Real handclap samples with reverb. Reich's 12-beat pattern (3-rest-2-rest-1-rest-2-rest) cycles through all 12 phase positions automatically.
 
 #### Drumming
 `/strudel/drumming/`
@@ -93,6 +93,19 @@ Steve Reich's 1967 phasing study, reimplemented using Strudel's natural drift ap
 `/strudel/morecomplex/`
 
 A 140 BPM drum pattern using TR-909 samples. Features pulsing white noise, randomly degraded kicks and claps, and snare hits on beats 4 and 11. Interactive sliders control the probability of kick and clap notes being dropped, demonstrating Strudel's `degradeBy()` function for generative rhythms.
+
+## Related Research
+
+**"Show Us Your Thoughts – But Which Ones?"** (Paz, Reppel, et al., ICLC 2025)
+`docs/paz_reppel_et_al_iclc2025_show_us_your_thoughts_but_which_ones.pdf`
+
+This paper analyzes implementations of Steve Reich's *Clapping Music* across 12 different live coding languages, comparing abstraction levels and affordances. The elegant one-liner Strudel version by Felix Roos inspired our implementation:
+
+```javascript
+s("cp!3 ~ cp!2 ~ cp ~ cp!2 ~").jux(x=>x.iter(12).repeatCycles(8))
+```
+
+The paper demonstrates how the same musical idea can be expressed in vastly different ways depending on the DSL's abstractions—from 34 lines in SuperCollider to 1 line in TidalCycles/Strudel.
 
 ## Dependencies
 
