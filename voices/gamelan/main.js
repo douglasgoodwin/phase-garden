@@ -1,6 +1,7 @@
 import * as Tone from 'tone';
 
 let loops = [];
+const statusEl = document.getElementById('status');
 
 document.getElementById('start').addEventListener('click', async () => {
   await Tone.start();
@@ -19,7 +20,14 @@ document.getElementById('start').addEventListener('click', async () => {
   };
 
   // Wait for all samples to load
-  await Tone.loaded();
+  try {
+    statusEl.textContent = 'Loading samples...';
+    await Tone.loaded();
+  } catch (err) {
+    statusEl.textContent = 'Error loading samples: ' + err.message;
+    console.error(err);
+    return;
+  }
 
   // Much longer loop times - every 17-31 measures (68-124 beats)
   const voiceLoop1 = new Tone.Loop((time) => {
@@ -53,9 +61,11 @@ document.getElementById('start').addEventListener('click', async () => {
   loops = [voiceLoop1, voiceLoop2, voiceLoop3, voiceLoop4, voiceLoop5, voiceLoop6, voiceLoop7];
   loops.forEach(loop => loop.start(0));
   Tone.Transport.start();
+  statusEl.textContent = 'Playing...';
 });
 
 document.getElementById('stop').addEventListener('click', () => {
   Tone.Transport.stop();
   loops.forEach(loop => loop.stop());
+  statusEl.textContent = '';
 });
