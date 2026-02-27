@@ -12,6 +12,9 @@ Phase Garden is a browser-based generative music application that creates ambien
 # Start development server
 npm run dev
 
+# Start OSC bridge for Sonic Pi pieces (separate terminal)
+npm run bridge
+
 # Build for production
 npm run build
 
@@ -80,6 +83,21 @@ npm run preview
 │   └── tapping-music/
 │       ├── index.html      # Demo page with BPM/bars-per-shift/humanize
 │       └── main.js         # Tapping Music (Reich 1972 variation)
+├── sonic-pi/
+│   ├── index.html          # Section page listing Sonic Pi demos
+│   ├── bridge.mjs          # WebSocket→OSC bridge (node sonic-pi/bridge.mjs)
+│   ├── piano-phase.rb      # Sonic Pi script for Piano Phase
+│   ├── piano-phase/
+│   │   ├── index.html      # Demo page with BPM/phase time sliders
+│   │   └── main.js         # Browser UI sending OSC via WebSocket
+│   ├── tapping-music.rb    # Sonic Pi script for Tapping Music
+│   ├── tapping-music/
+│   │   ├── index.html      # Demo page with BPM/bars-per-shift/humanize
+│   │   └── main.js         # Browser UI sending OSC via WebSocket
+│   ├── drumming.rb         # Sonic Pi script for Drumming
+│   └── drumming/
+│       ├── index.html      # Demo page with BPM/part/density controls
+│       └── main.js         # Browser UI sending OSC via WebSocket
 ├── notes/                  # Shared voice audio samples (.m4a)
 ├── dirt-samples/           # Strudel sample library (gitignored)
 └── CLAUDE.md
@@ -119,8 +137,17 @@ Tone.js implementations of classic minimalist compositions.
 - **Les Moutons de Panurge** - Frederic Rzewski (1969) - Additive/subtractive canons with up to 8 voices
 - **Tapping Music** - Steve Reich (1972) variation using FM synth bells with humanization
 
+### Sonic Pi
+Browser UI controlling Sonic Pi via OSC. Requires Sonic Pi running locally and the OSC bridge (`npm run bridge`).
+
+- **Piano Phase** - Steve Reich (1967) using Sonic Pi's `:piano` synth with OSC-controlled drift
+- **Tapping Music** - Steve Reich (1972) using `:perc_snap` samples with bar-aligned phase shifting
+- **Drumming** - Steve Reich (1970-71) with 4 parts: drum samples, `:pluck` marimbas, `:pretty_bell` glockenspiels
+
 ## Dependencies
 
 - **Tone.js** - Audio scheduling and synthesis
 - **Strudel** (@strudel/core, @strudel/mini, @strudel/webaudio, @strudel/draw) - Algorithmic pattern library
+- **Sonic Pi** - Live coding synth (external, via OSC on port 4560)
+- **ws** - WebSocket library for the OSC bridge
 - **Vite** - Dev server and bundler

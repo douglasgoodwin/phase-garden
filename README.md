@@ -94,6 +94,37 @@ Steve Reich's 1967 phasing study, reimplemented using Strudel's natural drift ap
 
 A 140 BPM drum pattern using TR-909 samples. Features pulsing white noise, randomly degraded kicks and claps, and snare hits on beats 4 and 11. Interactive sliders control the probability of kick and clap notes being dropped, demonstrating Strudel's `degradeBy()` function for generative rhythms.
 
+### Sonic Pi
+
+Browser UI controlling [Sonic Pi](https://sonic-pi.net/) via OSC. Audio is rendered by Sonic Pi's SuperCollider engine for sample-accurate timing — the browser only sends control messages through a lightweight WebSocket-to-OSC bridge.
+
+**Setup:**
+
+```bash
+# 1. Start the OSC bridge (WebSocket :8765 → UDP :4560)
+npm run bridge
+
+# 2. Start the dev server (in another terminal)
+npm run dev
+
+# 3. In Sonic Pi, paste and Run the .rb script for the piece you want
+```
+
+#### Piano Phase
+`/sonic-pi/piano-phase/`
+
+Steve Reich's 1967 phasing study rendered through Sonic Pi's `:piano` synth. Two pianos play the same 12-note pattern with the browser controlling tempo and phase drift rate. Sonic Pi's tight scheduling produces cleaner phasing than the Web Audio version.
+
+#### Tapping Music
+`/sonic-pi/tapping-music/`
+
+Reich's Clapping Music (1972) using Sonic Pi's `:perc_snap` and `:perc_snap2` samples. Two distinct snap sounds with humanized timing, bar-aligned phase shifting handled internally by Sonic Pi. Sliders for BPM, bars per shift, and humanization amount.
+
+#### Drumming
+`/sonic-pi/drumming/`
+
+Reich's 1970-71 work in four parts. Part 1 uses tuned drum samples (toms at different rates), Part 2 uses `:pluck` synths for marimbas, Part 3 uses `:pretty_bell` for glockenspiels, Part 4 combines all three. Multiple voices per part play at different phase offsets creating interlocking textures. The density slider randomly mutes notes, simulating Reich's "substituting beats for rests" process.
+
 ## Related Research
 
 **"Show Us Your Thoughts – But Which Ones?"** (Paz, Reppel, et al., ICLC 2025)
@@ -111,4 +142,6 @@ The paper demonstrates how the same musical idea can be expressed in vastly diff
 
 - [Tone.js](https://tonejs.github.io/) - Web Audio framework
 - [Strudel](https://strudel.cc/) - Algorithmic pattern library (TidalCycles for JS)
+- [Sonic Pi](https://sonic-pi.net/) - Live coding music synth (external, communicates via OSC)
 - [Vite](https://vitejs.dev/) - Development server and bundler
+- [ws](https://github.com/websockets/ws) - WebSocket library for the OSC bridge
