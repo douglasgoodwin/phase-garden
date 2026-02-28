@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vocal Kit (Sonic Pi) - Phase Garden</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Vocal Kit (Sonic Pi)</h1>
+  <p>Phasing beatbox — three mouth-sound drum kits drifting apart</p>
+  <p><a href="/sonic-pi/">Back to Sonic Pi</a></p>
+
+  <p style="color: #9ca3af; max-width: 600px; line-height: 1.6;">
+    Three drum kits made entirely of mouth sounds — kicks, snares, hi-hats, clicks, pops, toms, shakers, and crashes — play the same 16-step pattern. Kit 1 holds steady while Kits 2 and 3 drift ahead at increasing rates, creating polyrhythmic textures as the copies slide against each other. Piano Phase for a beatbox.
+  </p>
+
+  <p id="connection-status" style="color: #c04040;">Disconnected from OSC bridge</p>
+
+  <button id="start" disabled>Start</button>
+  <button id="stop" disabled>Stop</button>
+
+  <div>
+    <label for="bpm">BPM: <span id="bpm-value">100</span></label>
+    <input type="range" id="bpm" min="70" max="140" value="100">
+  </div>
+  <div>
+    <label for="drift">Phase drift: <span id="drift-value">0</span>%</label>
+    <input type="range" id="drift" min="0" max="50" value="0">
+  </div>
+
+  <p id="status">Ready</p>
+
+  <div style="margin-top: 2em; padding: 1em; background: #16162a; border-radius: 4px;">
+    <h3 style="margin-top: 0;">Setup</h3>
+    <ol style="padding-left: 1.5em;">
+      <li>Open Sonic Pi and paste <code>sonic-pi/vocal-kit.rb</code></li>
+      <li>Run <code>npm run bridge</code> in a terminal</li>
+      <li>Click Start, then bring up the drift slider</li>
+    </ol>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

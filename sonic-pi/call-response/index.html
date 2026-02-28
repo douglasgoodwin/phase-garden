@@ -3,18 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Choir of Primes (Sonic Pi) - Phase Garden</title>
+  <title>Call &amp; Response (Sonic Pi) - Phase Garden</title>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <h1>Choir of Primes (Sonic Pi)</h1>
-  <p>22 voices, each repeating at a different prime-number interval — audio via Sonic Pi over OSC</p>
+  <h1>Call &amp; Response (Sonic Pi)</h1>
+  <p>Soul vocal phrases in paired call-and-response layers — audio via Sonic Pi over OSC</p>
   <p><a href="/sonic-pi/">Back to Sonic Pi</a></p>
 
   <p style="color: #9ca3af; max-width: 600px; line-height: 1.6;">
-    Each voice loops a random vocal clip at an interval of 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, or 89 seconds.
-    Because primes share no common factors, the voices almost never align — the texture is constantly evolving and effectively never repeats.
-    Pitch shifts stay within the selected key using consonant intervals (fourths, fifths, minor or major thirds).
+    10 paired voices each play a call-and-response pattern: a clip panned left, a 1-3 beat pause, then a response panned right with occasional pitch shifts and extra reverb. Each pair repeats at a different bar-aligned interval, building overlapping stereo conversations that weave in and out of sync.
   </p>
 
   <p id="connection-status" style="color: #c04040;">Disconnected from OSC bridge</p>
@@ -25,15 +23,17 @@
   <div>
     <label for="key">Key:</label>
     <select id="key" style="background:#2d2d44; color:#eaeaea; border:1px solid #4c1d95; padding:0.4rem; font-family:inherit; border-radius:4px;">
-      <option value="Aminor">A minor</option>
+      <option value="Abminor">Ab minor</option>
       <option value="Cminor">C minor</option>
-      <option value="Dminor">D minor</option>
-      <option value="Ebmajor">Eb major</option>
-      <option value="Ebminor" selected>Eb minor</option>
+      <option value="Emajor" selected>E major</option>
       <option value="Eminor">E minor</option>
       <option value="Fminor">F minor</option>
-      <option value="Gminor">G minor</option>
+      <option value="Gbminor">Gb minor</option>
     </select>
+  </div>
+  <div>
+    <label for="bpm">BPM: <span id="bpm-value">95</span></label>
+    <input type="range" id="bpm" min="70" max="120" value="95">
   </div>
 
   <p id="status">Ready</p>
@@ -41,7 +41,7 @@
   <div style="margin-top: 2em; padding: 1em; background: #16162a; border-radius: 4px;">
     <h3 style="margin-top: 0;">Setup</h3>
     <ol style="padding-left: 1.5em;">
-      <li>Open Sonic Pi and paste <code>sonic-pi/choir-of-primes.rb</code></li>
+      <li>Open Sonic Pi and paste <code>sonic-pi/call-response.rb</code></li>
       <li>Run <code>npm run bridge</code> in a terminal</li>
       <li>Choose a key and click Start</li>
     </ol>

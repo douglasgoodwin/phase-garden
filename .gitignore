@@ -14,4 +14,5 @@ dist/
 
 # Sample libraries (too large for git)
 dirt-samples/
+samples/
 master.zip

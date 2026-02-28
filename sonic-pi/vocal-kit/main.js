@@ -1,4 +1,4 @@
-// Choir of Primes — browser UI → WebSocket → OSC bridge → Sonic Pi
+// Vocal Kit — browser UI → WebSocket → OSC bridge → Sonic Pi
 
 let ws = null;
 let connected = false;
@@ -6,7 +6,10 @@ let connected = false;
 const connectionStatus = document.getElementById('connection-status');
 const startBtn = document.getElementById('start');
 const stopBtn = document.getElementById('stop');
-const keySelect = document.getElementById('key');
+const bpmSlider = document.getElementById('bpm');
+const bpmValue = document.getElementById('bpm-value');
+const driftSlider = document.getElementById('drift');
+const driftValue = document.getElementById('drift-value');
 const status = document.getElementById('status');
 
 function connect() {
@@ -37,19 +40,26 @@ function send(address, ...args) {
   ws.send(JSON.stringify({ address, args }));
 }
 
-keySelect.addEventListener('change', () => {
-  send('/choir-of-primes/key', keySelect.value);
-  status.textContent = `Switched to ${keySelect.options[keySelect.selectedIndex].text}`;
+bpmSlider.addEventListener('input', () => {
+  bpmValue.textContent = bpmSlider.value;
+  send('/vocal-kit/bpm', parseFloat(bpmSlider.value));
+});
+
+driftSlider.addEventListener('input', () => {
+  driftValue.textContent = driftSlider.value;
+  // Scale 0-50 slider to 0.0-0.05 drift value
+  send('/vocal-kit/drift', parseFloat(driftSlider.value) / 1000);
 });
 
 startBtn.addEventListener('click', () => {
-  send('/choir-of-primes/key', keySelect.value);
-  send('/choir-of-primes/start');
-  status.textContent = `Playing in ${keySelect.options[keySelect.selectedIndex].text}`;
+  send('/vocal-kit/bpm', parseFloat(bpmSlider.value));
+  send('/vocal-kit/drift', parseFloat(driftSlider.value) / 1000);
+  send('/vocal-kit/start');
+  status.textContent = 'Playing — bring up the drift slider to phase';
 });
 
 stopBtn.addEventListener('click', () => {
-  send('/choir-of-primes/stop');
+  send('/vocal-kit/stop');
   status.textContent = 'Stopped';
 });
 
