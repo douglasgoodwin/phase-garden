@@ -10,6 +10,37 @@
   <h1>Sonic Pi</h1>
   <p><a href="/">Back to home</a></p>
   <p>Browser UI controlling Sonic Pi via OSC</p>
+
+  <div style="margin-top: 2em; padding: 1em; background: #16162a; border-radius: 4px; max-width: 640px;">
+    <h3 style="margin-top: 0;">How it works</h3>
+    <p style="line-height: 1.6;">
+      Each piece has a browser page with controls (start/stop, sliders, key selectors) and a Sonic Pi script that handles the audio. The browser sends control messages over WebSocket to a small Node.js bridge, which forwards them as OSC to Sonic Pi on localhost:4560.
+    </p>
+    <p style="margin-bottom: 0;">
+      <code style="color: #7dd3fc;">Browser</code>
+      &rarr; <code style="color: #7dd3fc;">WebSocket :8765</code>
+      &rarr; <code style="color: #7dd3fc;">bridge.mjs</code>
+      &rarr; <code style="color: #7dd3fc;">OSC :4560</code>
+      &rarr; <code style="color: #7dd3fc;">Sonic Pi</code>
+    </p>
+  </div>
+
+  <div style="margin-top: 1.5em; padding: 1em; background: #16162a; border-radius: 4px; max-width: 640px;">
+    <h3 style="margin-top: 0;">Setup</h3>
+    <ol style="padding-left: 1.5em; line-height: 1.8;">
+      <li>Open <strong>Sonic Pi</strong> and paste the <code>.rb</code> script for the piece you want to play (e.g. <code>sonic-pi/piano-phase.rb</code>). Hit Run.</li>
+      <li>Start the OSC bridge in a terminal:
+        <pre style="background: #1a1a2e; padding: 0.5em; border-radius: 4px; margin: 0.4em 0;"><code>npm run bridge</code></pre>
+        You should see <em>"OSC bridge listening on ws://localhost:8765"</em>.
+      </li>
+      <li>Open the piece's browser page (via <code>npm run dev</code>) and click <strong>Start</strong>.</li>
+    </ol>
+    <p style="margin-bottom: 0; font-size: 0.85em;">
+      Some pieces use custom samples — update the <code>D = File.expand_path(...)</code> path at the top of each <code>.rb</code> file to match your system.
+    </p>
+  </div>
+
+  <h3>Pieces</h3>
   <ul>
     <li><a href="/sonic-pi/piano-phase/">Piano Phase</a> - Steve Reich (1967)</li>
     <li><a href="/sonic-pi/tapping-music/">Tapping Music</a> - Steve Reich (1972)</li>
