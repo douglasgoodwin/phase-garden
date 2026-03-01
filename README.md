@@ -123,7 +123,32 @@ Reich's Clapping Music (1972) using Sonic Pi's `:perc_snap` and `:perc_snap2` sa
 #### Drumming
 `/sonic-pi/drumming/`
 
-Reich's 1970-71 work in four parts. Part 1 uses tuned drum samples (toms at different rates), Part 2 uses `:pluck` synths for marimbas, Part 3 uses `:pretty_bell` for glockenspiels, Part 4 combines all three. Multiple voices per part play at different phase offsets creating interlocking textures. The density slider randomly mutes notes, simulating Reich's "substituting beats for rests" process.
+Reich's 1970-71 work in four parts using bongo, marimba, and glockenspiel samples. Multiple voices per part play at different phase offsets creating interlocking textures. The density slider randomly mutes notes, simulating Reich's "substituting beats for rests" process.
+
+#### Choir of Primes
+`/sonic-pi/gamelan/`
+
+22 voices, each looping a random vocal clip at a different prime-number interval (5, 7, 11, ... 89 seconds). Because primes share no common factors, the voices almost never align — the texture is constantly evolving and effectively never repeats. Pitch shifts stay within the selected key using consonant intervals (fourths, fifths, minor or major thirds). Key selector switches between vocal sample sets.
+
+#### D Major
+`/sonic-pi/d-major/`
+
+14 sine-wave voices each play short 1-4 note figures in D major, looping at slightly different lengths (23.5 to 29.9 seconds). The small differences in cycle time cause the voices to drift in and out of phase, creating a slowly evolving ambient wash.
+
+#### Soul Stacks
+`/sonic-pi/soul-stacks/`
+
+15 voices loop soul vocal clips at different bar-aligned intervals (2 to 32 bars). Unlike prime-number spacing, bar alignment lets phrases lock into grooves before drifting apart. Pitch shifts stay consonant within the selected key. The layers build into a dense, evolving wall of overlapping voices.
+
+#### Call & Response
+`/sonic-pi/call-response/`
+
+10 paired voices each play a call-and-response pattern: a clip panned left, a 1-3 beat pause, then a response panned right with occasional pitch shifts and extra reverb. Each pair repeats at a different bar-aligned interval, building overlapping stereo conversations.
+
+#### Vocal Kit
+`/sonic-pi/vocal-kit/`
+
+Three drum kits made entirely of mouth sounds (kicks, snares, hi-hats, clicks, pops, toms, shakers, crashes) play the same 16-step pattern. Kit 1 holds steady while Kits 2 and 3 drift ahead at increasing rates, creating polyrhythmic textures — Piano Phase for a beatbox.
 
 ## Related Research
 
