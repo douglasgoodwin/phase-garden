@@ -66,6 +66,43 @@ function medianFilter(frames, windowSize) {
 const smoothed = medianFilter(frames, MEDIAN_WINDOW);
 console.log(`Applied median filter (window=${MEDIAN_WINDOW})`);
 
+// --- Octave correction: fix subharmonic tracking errors ---
+// If a frame is ~1 octave below its neighbors, it's likely a tracking error.
+// Use a wider window to establish the local pitch center, then bump up octave drops.
+const OCTAVE_WINDOW = 31; // ~360ms context window
+
+function octaveCorrect(frames, windowSize) {
+  const half = Math.floor(windowSize / 2);
+  let corrected = 0;
+  const result = frames.map((frame, i) => {
+    if (frame.freq <= 0) return frame;
+
+    // Gather pitched neighbors in the window
+    const start = Math.max(0, i - half);
+    const end = Math.min(frames.length, i + half + 1);
+    const neighborFreqs = [];
+    for (let j = start; j < end; j++) {
+      if (j !== i && frames[j].freq > 0) neighborFreqs.push(frames[j].freq);
+    }
+    if (neighborFreqs.length < 3) return frame;
+
+    neighborFreqs.sort((a, b) => a - b);
+    const localMedian = neighborFreqs[Math.floor(neighborFreqs.length / 2)];
+
+    // If this frame is roughly an octave below the local median, double it
+    const ratio = localMedian / frame.freq;
+    if (ratio > 1.7 && ratio < 2.3) {
+      corrected++;
+      return { ...frame, freq: frame.freq * 2 };
+    }
+    return frame;
+  });
+  console.log(`Octave correction: fixed ${corrected} frames`);
+  return result;
+}
+
+const corrected = octaveCorrect(smoothed, OCTAVE_WINDOW);
+
 // Group consecutive pitched frames into notes
 // Frames at similar pitch get merged into a single note
 const MIN_DURATION = 0.06; // ignore notes shorter than 60ms
@@ -76,7 +113,7 @@ const SEMITONE_THRESHOLD = 3; // max semitone difference to merge frames
 const notes = [];
 let currentNote = null;
 
-for (const frame of smoothed) {
+for (const frame of corrected) {
   const pitched = frame.freq >= MIN_FREQ && frame.freq <= MAX_FREQ;
 
   if (pitched) {

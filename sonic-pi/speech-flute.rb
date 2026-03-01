@@ -16,7 +16,7 @@
 #   /speech-flute/note <hz> <dur> - play an oboe note at given freq and duration
 
 # Path to samples directory — update for your system
-D = File.expand_path("~/phase-garden/samples")
+D = File.expand_path("~/_CODE/phase-garden/samples")
 oboe = "#{D}/Oboe.ff.A4.mono.wav"
 
 set :running, false
@@ -54,7 +54,7 @@ live_loop :sf_note do
     rel = 0.15
     sus = [dur - att - rel, 0.01].max
 
-    with_fx :reverb, room: 0.85, mix: 0.5 do
+    with_fx :reverb, room: 0.75, mix: 0.4 do
       with_fx :echo, phase: 0.25, decay: 2, mix: 0.3 do
         sample oboe,
           rpitch: shift,
