@@ -1,0 +1,1087 @@
+[
+  {
+    "time": 0.104,
+    "freq": 174.61,
+    "duration": 0.104
+  },
+  {
+    "time": 0.325,
+    "freq": 138.59,
+    "duration": 0.046
+  },
+  {
+    "time": 0.511,
+    "freq": 103.83,
+    "duration": 0.081
+  },
+  {
+    "time": 0.673,
+    "freq": 174.61,
+    "duration": 0.058
+  },
+  {
+    "time": 0.801,
+    "freq": 123.47,
+    "duration": 0.081
+  },
+  {
+    "time": 0.882,
+    "freq": 110,
+    "duration": 0.058
+  },
+  {
+    "time": 1.057,
+    "freq": 155.56,
+    "duration": 0.046
+  },
+  {
+    "time": 1.103,
+    "freq": 155.56,
+    "duration": 0.046
+  },
+  {
+    "time": 1.312,
+    "freq": 233.08,
+    "duration": 0.046
+  },
+  {
+    "time": 1.382,
+    "freq": 220,
+    "duration": 0.093
+  },
+  {
+    "time": 1.614,
+    "freq": 87.31,
+    "duration": 0.07
+  },
+  {
+    "time": 1.707,
+    "freq": 82.41,
+    "duration": 0.07
+  },
+  {
+    "time": 2.043,
+    "freq": 587.33,
+    "duration": 0.046
+  },
+  {
+    "time": 2.159,
+    "freq": 77.78,
+    "duration": 0.058
+  },
+  {
+    "time": 2.276,
+    "freq": 103.83,
+    "duration": 0.058
+  },
+  {
+    "time": 2.357,
+    "freq": 311.13,
+    "duration": 0.151
+  },
+  {
+    "time": 2.891,
+    "freq": 116.54,
+    "duration": 0.058
+  },
+  {
+    "time": 3.019,
+    "freq": 116.54,
+    "duration": 0.081
+  },
+  {
+    "time": 3.1,
+    "freq": 123.47,
+    "duration": 0.058
+  },
+  {
+    "time": 3.17,
+    "freq": 220,
+    "duration": 0.046
+  },
+  {
+    "time": 3.274,
+    "freq": 622.25,
+    "duration": 0.046
+  },
+  {
+    "time": 3.564,
+    "freq": 369.99,
+    "duration": 0.058
+  },
+  {
+    "time": 4.017,
+    "freq": 155.56,
+    "duration": 0.058
+  },
+  {
+    "time": 4.11,
+    "freq": 207.65,
+    "duration": 0.116
+  },
+  {
+    "time": 4.296,
+    "freq": 138.59,
+    "duration": 0.058
+  },
+  {
+    "time": 4.377,
+    "freq": 110,
+    "duration": 0.174
+  },
+  {
+    "time": 4.981,
+    "freq": 130.81,
+    "duration": 0.046
+  },
+  {
+    "time": 5.236,
+    "freq": 130.81,
+    "duration": 0.093
+  },
+  {
+    "time": 5.352,
+    "freq": 440,
+    "duration": 0.046
+  },
+  {
+    "time": 5.433,
+    "freq": 207.65,
+    "duration": 0.081
+  },
+  {
+    "time": 5.933,
+    "freq": 659.26,
+    "duration": 0.058
+  },
+  {
+    "time": 6.037,
+    "freq": 698.46,
+    "duration": 0.046
+  },
+  {
+    "time": 6.42,
+    "freq": 739.99,
+    "duration": 0.058
+  },
+  {
+    "time": 6.525,
+    "freq": 783.99,
+    "duration": 0.046
+  },
+  {
+    "time": 6.606,
+    "freq": 92.5,
+    "duration": 0.186
+  },
+  {
+    "time": 6.989,
+    "freq": 92.5,
+    "duration": 0.046
+  },
+  {
+    "time": 7.059,
+    "freq": 207.65,
+    "duration": 0.046
+  },
+  {
+    "time": 7.105,
+    "freq": 92.5,
+    "duration": 0.046
+  },
+  {
+    "time": 7.303,
+    "freq": 164.81,
+    "duration": 0.046
+  },
+  {
+    "time": 7.5,
+    "freq": 739.99,
+    "duration": 0.058
+  },
+  {
+    "time": 7.686,
+    "freq": 92.5,
+    "duration": 0.232
+  },
+  {
+    "time": 8.231,
+    "freq": 220,
+    "duration": 0.058
+  },
+  {
+    "time": 8.348,
+    "freq": 82.41,
+    "duration": 0.104
+  },
+  {
+    "time": 8.452,
+    "freq": 87.31,
+    "duration": 0.209
+  },
+  {
+    "time": 8.754,
+    "freq": 659.26,
+    "duration": 0.046
+  },
+  {
+    "time": 8.835,
+    "freq": 87.31,
+    "duration": 0.116
+  },
+  {
+    "time": 9.242,
+    "freq": 554.37,
+    "duration": 0.058
+  },
+  {
+    "time": 9.369,
+    "freq": 98,
+    "duration": 0.104
+  },
+  {
+    "time": 9.776,
+    "freq": 554.37,
+    "duration": 0.046
+  },
+  {
+    "time": 9.892,
+    "freq": 82.41,
+    "duration": 0.081
+  },
+  {
+    "time": 9.996,
+    "freq": 87.31,
+    "duration": 0.093
+  },
+  {
+    "time": 10.147,
+    "freq": 98,
+    "duration": 0.046
+  },
+  {
+    "time": 10.205,
+    "freq": 92.5,
+    "duration": 0.174
+  },
+  {
+    "time": 10.414,
+    "freq": 116.54,
+    "duration": 0.046
+  },
+  {
+    "time": 10.495,
+    "freq": 82.41,
+    "duration": 0.058
+  },
+  {
+    "time": 10.577,
+    "freq": 98,
+    "duration": 0.07
+  },
+  {
+    "time": 10.646,
+    "freq": 103.83,
+    "duration": 0.081
+  },
+  {
+    "time": 10.855,
+    "freq": 98,
+    "duration": 0.093
+  },
+  {
+    "time": 11.053,
+    "freq": 82.41,
+    "duration": 0.046
+  },
+  {
+    "time": 11.111,
+    "freq": 82.41,
+    "duration": 0.116
+  },
+  {
+    "time": 11.227,
+    "freq": 87.31,
+    "duration": 0.058
+  },
+  {
+    "time": 11.529,
+    "freq": 77.78,
+    "duration": 0.07
+  },
+  {
+    "time": 11.738,
+    "freq": 587.33,
+    "duration": 0.046
+  },
+  {
+    "time": 11.784,
+    "freq": 174.61,
+    "duration": 0.081
+  },
+  {
+    "time": 11.9,
+    "freq": 123.47,
+    "duration": 0.046
+  },
+  {
+    "time": 11.97,
+    "freq": 155.56,
+    "duration": 0.046
+  },
+  {
+    "time": 12.167,
+    "freq": 116.54,
+    "duration": 0.302
+  },
+  {
+    "time": 12.55,
+    "freq": 123.47,
+    "duration": 0.058
+  },
+  {
+    "time": 12.725,
+    "freq": 739.99,
+    "duration": 0.058
+  },
+  {
+    "time": 12.829,
+    "freq": 220,
+    "duration": 0.046
+  },
+  {
+    "time": 13.131,
+    "freq": 233.08,
+    "duration": 0.046
+  },
+  {
+    "time": 13.386,
+    "freq": 698.46,
+    "duration": 0.058
+  },
+  {
+    "time": 13.444,
+    "freq": 739.99,
+    "duration": 0.07
+  },
+  {
+    "time": 13.839,
+    "freq": 220,
+    "duration": 0.058
+  },
+  {
+    "time": 13.944,
+    "freq": 98,
+    "duration": 0.058
+  },
+  {
+    "time": 14.164,
+    "freq": 92.5,
+    "duration": 0.128
+  },
+  {
+    "time": 14.617,
+    "freq": 92.5,
+    "duration": 0.058
+  },
+  {
+    "time": 14.687,
+    "freq": 739.99,
+    "duration": 0.046
+  },
+  {
+    "time": 14.768,
+    "freq": 146.83,
+    "duration": 0.07
+  },
+  {
+    "time": 14.896,
+    "freq": 554.37,
+    "duration": 0.046
+  },
+  {
+    "time": 15.012,
+    "freq": 130.81,
+    "duration": 0.058
+  },
+  {
+    "time": 15.232,
+    "freq": 73.42,
+    "duration": 0.104
+  },
+  {
+    "time": 15.337,
+    "freq": 69.3,
+    "duration": 0.046
+  },
+  {
+    "time": 15.383,
+    "freq": 146.83,
+    "duration": 0.046
+  },
+  {
+    "time": 15.534,
+    "freq": 92.5,
+    "duration": 0.348
+  },
+  {
+    "time": 16.068,
+    "freq": 87.31,
+    "duration": 0.046
+  },
+  {
+    "time": 16.219,
+    "freq": 82.41,
+    "duration": 0.116
+  },
+  {
+    "time": 16.498,
+    "freq": 196,
+    "duration": 0.058
+  },
+  {
+    "time": 16.73,
+    "freq": 92.5,
+    "duration": 0.081
+  },
+  {
+    "time": 16.823,
+    "freq": 103.83,
+    "duration": 0.046
+  },
+  {
+    "time": 16.985,
+    "freq": 103.83,
+    "duration": 0.104
+  },
+  {
+    "time": 17.09,
+    "freq": 110,
+    "duration": 0.046
+  },
+  {
+    "time": 17.322,
+    "freq": 82.41,
+    "duration": 0.093
+  },
+  {
+    "time": 17.543,
+    "freq": 77.78,
+    "duration": 0.104
+  },
+  {
+    "time": 17.647,
+    "freq": 87.31,
+    "duration": 0.046
+  },
+  {
+    "time": 17.705,
+    "freq": 207.65,
+    "duration": 0.07
+  },
+  {
+    "time": 17.775,
+    "freq": 103.83,
+    "duration": 0.07
+  },
+  {
+    "time": 17.845,
+    "freq": 233.08,
+    "duration": 0.046
+  },
+  {
+    "time": 17.984,
+    "freq": 98,
+    "duration": 0.104
+  },
+  {
+    "time": 18.123,
+    "freq": 73.42,
+    "duration": 0.046
+  },
+  {
+    "time": 18.216,
+    "freq": 92.5,
+    "duration": 0.058
+  },
+  {
+    "time": 18.274,
+    "freq": 233.08,
+    "duration": 0.07
+  },
+  {
+    "time": 18.39,
+    "freq": 130.81,
+    "duration": 0.058
+  },
+  {
+    "time": 18.448,
+    "freq": 138.59,
+    "duration": 0.058
+  },
+  {
+    "time": 18.506,
+    "freq": 698.46,
+    "duration": 0.058
+  },
+  {
+    "time": 18.611,
+    "freq": 293.66,
+    "duration": 0.046
+  },
+  {
+    "time": 19.18,
+    "freq": 207.65,
+    "duration": 0.07
+  },
+  {
+    "time": 19.342,
+    "freq": 174.61,
+    "duration": 0.058
+  },
+  {
+    "time": 19.447,
+    "freq": 138.59,
+    "duration": 0.163
+  },
+  {
+    "time": 19.644,
+    "freq": 174.61,
+    "duration": 0.093
+  },
+  {
+    "time": 19.783,
+    "freq": 103.83,
+    "duration": 0.046
+  },
+  {
+    "time": 19.83,
+    "freq": 293.66,
+    "duration": 0.046
+  },
+  {
+    "time": 19.876,
+    "freq": 311.13,
+    "duration": 0.046
+  },
+  {
+    "time": 20.48,
+    "freq": 116.54,
+    "duration": 0.07
+  },
+  {
+    "time": 20.55,
+    "freq": 220,
+    "duration": 0.046
+  },
+  {
+    "time": 20.863,
+    "freq": 116.54,
+    "duration": 0.07
+  },
+  {
+    "time": 21.06,
+    "freq": 103.83,
+    "duration": 0.07
+  },
+  {
+    "time": 21.142,
+    "freq": 92.5,
+    "duration": 0.07
+  },
+  {
+    "time": 21.246,
+    "freq": 82.41,
+    "duration": 0.139
+  },
+  {
+    "time": 21.49,
+    "freq": 77.78,
+    "duration": 0.058
+  },
+  {
+    "time": 21.548,
+    "freq": 73.42,
+    "duration": 0.07
+  },
+  {
+    "time": 21.734,
+    "freq": 98,
+    "duration": 0.058
+  },
+  {
+    "time": 22.187,
+    "freq": 185,
+    "duration": 0.093
+  },
+  {
+    "time": 22.361,
+    "freq": 103.83,
+    "duration": 0.046
+  },
+  {
+    "time": 22.407,
+    "freq": 92.5,
+    "duration": 0.058
+  },
+  {
+    "time": 22.848,
+    "freq": 207.65,
+    "duration": 0.07
+  },
+  {
+    "time": 23.023,
+    "freq": 196,
+    "duration": 0.046
+  },
+  {
+    "time": 23.127,
+    "freq": 220,
+    "duration": 0.058
+  },
+  {
+    "time": 23.185,
+    "freq": 233.08,
+    "duration": 0.046
+  },
+  {
+    "time": 23.359,
+    "freq": 164.81,
+    "duration": 0.046
+  },
+  {
+    "time": 23.406,
+    "freq": 523.25,
+    "duration": 0.046
+  },
+  {
+    "time": 23.963,
+    "freq": 123.47,
+    "duration": 0.104
+  },
+  {
+    "time": 24.172,
+    "freq": 87.31,
+    "duration": 0.046
+  },
+  {
+    "time": 24.253,
+    "freq": 110,
+    "duration": 0.07
+  },
+  {
+    "time": 24.567,
+    "freq": 116.54,
+    "duration": 0.046
+  },
+  {
+    "time": 24.694,
+    "freq": 659.26,
+    "duration": 0.058
+  },
+  {
+    "time": 24.996,
+    "freq": 233.08,
+    "duration": 0.058
+  },
+  {
+    "time": 25.298,
+    "freq": 110,
+    "duration": 0.046
+  },
+  {
+    "time": 25.345,
+    "freq": 116.54,
+    "duration": 0.07
+  },
+  {
+    "time": 25.588,
+    "freq": 440,
+    "duration": 0.058
+  },
+  {
+    "time": 25.832,
+    "freq": 220,
+    "duration": 0.046
+  },
+  {
+    "time": 26.006,
+    "freq": 739.99,
+    "duration": 0.104
+  },
+  {
+    "time": 26.854,
+    "freq": 87.31,
+    "duration": 0.081
+  },
+  {
+    "time": 26.958,
+    "freq": 196,
+    "duration": 0.046
+  },
+  {
+    "time": 27.005,
+    "freq": 82.41,
+    "duration": 0.058
+  },
+  {
+    "time": 27.063,
+    "freq": 233.08,
+    "duration": 0.058
+  },
+  {
+    "time": 27.191,
+    "freq": 130.81,
+    "duration": 0.046
+  },
+  {
+    "time": 27.237,
+    "freq": 622.25,
+    "duration": 0.046
+  },
+  {
+    "time": 27.492,
+    "freq": 587.33,
+    "duration": 0.081
+  },
+  {
+    "time": 27.69,
+    "freq": 116.54,
+    "duration": 0.081
+  },
+  {
+    "time": 28.154,
+    "freq": 207.65,
+    "duration": 0.046
+  },
+  {
+    "time": 28.247,
+    "freq": 196,
+    "duration": 0.046
+  },
+  {
+    "time": 28.294,
+    "freq": 103.83,
+    "duration": 0.046
+  },
+  {
+    "time": 28.352,
+    "freq": 138.59,
+    "duration": 0.128
+  },
+  {
+    "time": 28.595,
+    "freq": 233.08,
+    "duration": 0.046
+  },
+  {
+    "time": 28.781,
+    "freq": 130.81,
+    "duration": 0.116
+  },
+  {
+    "time": 28.955,
+    "freq": 123.47,
+    "duration": 0.081
+  },
+  {
+    "time": 29.106,
+    "freq": 207.65,
+    "duration": 0.046
+  },
+  {
+    "time": 29.187,
+    "freq": 196,
+    "duration": 0.058
+  },
+  {
+    "time": 29.28,
+    "freq": 103.83,
+    "duration": 0.151
+  },
+  {
+    "time": 29.547,
+    "freq": 130.81,
+    "duration": 0.186
+  },
+  {
+    "time": 29.768,
+    "freq": 103.83,
+    "duration": 0.093
+  },
+  {
+    "time": 29.861,
+    "freq": 98,
+    "duration": 0.046
+  },
+  {
+    "time": 29.977,
+    "freq": 138.59,
+    "duration": 0.081
+  },
+  {
+    "time": 30.07,
+    "freq": 659.26,
+    "duration": 0.046
+  },
+  {
+    "time": 30.314,
+    "freq": 146.83,
+    "duration": 0.046
+  },
+  {
+    "time": 30.708,
+    "freq": 220,
+    "duration": 0.046
+  },
+  {
+    "time": 30.801,
+    "freq": 130.81,
+    "duration": 0.081
+  },
+  {
+    "time": 31.08,
+    "freq": 196,
+    "duration": 0.07
+  },
+  {
+    "time": 31.231,
+    "freq": 130.81,
+    "duration": 0.081
+  },
+  {
+    "time": 31.451,
+    "freq": 116.54,
+    "duration": 0.255
+  },
+  {
+    "time": 31.835,
+    "freq": 466.16,
+    "duration": 0.081
+  },
+  {
+    "time": 31.985,
+    "freq": 207.65,
+    "duration": 0.058
+  },
+  {
+    "time": 32.45,
+    "freq": 87.31,
+    "duration": 0.116
+  },
+  {
+    "time": 32.74,
+    "freq": 138.59,
+    "duration": 0.093
+  },
+  {
+    "time": 32.845,
+    "freq": 233.08,
+    "duration": 0.046
+  },
+  {
+    "time": 32.938,
+    "freq": 110,
+    "duration": 0.128
+  },
+  {
+    "time": 33.065,
+    "freq": 98,
+    "duration": 0.046
+  },
+  {
+    "time": 33.112,
+    "freq": 92.5,
+    "duration": 0.104
+  },
+  {
+    "time": 33.414,
+    "freq": 130.81,
+    "duration": 0.07
+  },
+  {
+    "time": 33.831,
+    "freq": 73.42,
+    "duration": 0.081
+  },
+  {
+    "time": 33.924,
+    "freq": 138.59,
+    "duration": 0.046
+  },
+  {
+    "time": 34.145,
+    "freq": 98,
+    "duration": 0.046
+  },
+  {
+    "time": 34.644,
+    "freq": 82.41,
+    "duration": 0.058
+  },
+  {
+    "time": 34.702,
+    "freq": 220,
+    "duration": 0.046
+  },
+  {
+    "time": 35.109,
+    "freq": 103.83,
+    "duration": 0.07
+  },
+  {
+    "time": 35.318,
+    "freq": 369.99,
+    "duration": 0.07
+  },
+  {
+    "time": 35.863,
+    "freq": 207.65,
+    "duration": 0.07
+  },
+  {
+    "time": 36.026,
+    "freq": 103.83,
+    "duration": 0.058
+  },
+  {
+    "time": 36.142,
+    "freq": 92.5,
+    "duration": 0.139
+  },
+  {
+    "time": 36.432,
+    "freq": 98,
+    "duration": 0.081
+  },
+  {
+    "time": 36.629,
+    "freq": 98,
+    "duration": 0.058
+  },
+  {
+    "time": 36.688,
+    "freq": 103.83,
+    "duration": 0.186
+  },
+  {
+    "time": 36.908,
+    "freq": 92.5,
+    "duration": 0.058
+  },
+  {
+    "time": 36.966,
+    "freq": 87.31,
+    "duration": 0.046
+  },
+  {
+    "time": 37.082,
+    "freq": 146.83,
+    "duration": 0.058
+  },
+  {
+    "time": 37.233,
+    "freq": 98,
+    "duration": 0.046
+  },
+  {
+    "time": 37.303,
+    "freq": 92.5,
+    "duration": 0.046
+  },
+  {
+    "time": 37.349,
+    "freq": 415.3,
+    "duration": 0.046
+  },
+  {
+    "time": 37.431,
+    "freq": 73.42,
+    "duration": 0.116
+  },
+  {
+    "time": 37.57,
+    "freq": 146.83,
+    "duration": 0.058
+  },
+  {
+    "time": 37.721,
+    "freq": 77.78,
+    "duration": 0.07
+  },
+  {
+    "time": 37.79,
+    "freq": 87.31,
+    "duration": 0.151
+  },
+  {
+    "time": 38.081,
+    "freq": 77.78,
+    "duration": 0.046
+  },
+  {
+    "time": 38.475,
+    "freq": 77.78,
+    "duration": 0.081
+  },
+  {
+    "time": 38.592,
+    "freq": 69.3,
+    "duration": 0.081
+  },
+  {
+    "time": 38.777,
+    "freq": 130.81,
+    "duration": 0.116
+  },
+  {
+    "time": 38.963,
+    "freq": 103.83,
+    "duration": 0.07
+  },
+  {
+    "time": 39.033,
+    "freq": 92.5,
+    "duration": 0.058
+  },
+  {
+    "time": 39.149,
+    "freq": 98,
+    "duration": 0.058
+  },
+  {
+    "time": 39.242,
+    "freq": 116.54,
+    "duration": 0.058
+  },
+  {
+    "time": 39.416,
+    "freq": 98,
+    "duration": 0.07
+  },
+  {
+    "time": 39.625,
+    "freq": 87.31,
+    "duration": 0.07
+  },
+  {
+    "time": 39.799,
+    "freq": 185,
+    "duration": 0.081
+  },
+  {
+    "time": 39.88,
+    "freq": 164.81,
+    "duration": 0.104
+  },
+  {
+    "time": 40.147,
+    "freq": 196,
+    "duration": 0.07
+  },
+  {
+    "time": 40.461,
+    "freq": 77.78,
+    "duration": 0.07
+  }
+]
